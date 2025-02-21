@@ -278,7 +278,7 @@ def PI_ANN(node_count, layer_count):
         ford_index = ford_index + 1
 
         score_train = r2_score(y_train, mean_train_result)
-        score_valid = r2_score(y_valid, mean_train_result)
+        score_valid = r2_score(y_valid, mean_valid_result)
         score_test = r2_score(y_test, mean_test_result)
 
 
