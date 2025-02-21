@@ -100,9 +100,9 @@ def PI_XGBoost():
         #mean_test_result = std_y.inverse_transform(mean_test_result)
         # save_result(y_test, np.array(mean_test_result), filepath3)
 
-        score_train = r2_score(mean_train_result, y_train)
-        score_valid = r2_score(mean_valid_result, y_valid)
-        score_test = r2_score(mean_test_result, y_test)
+        score_train = r2_score(y_train, mean_train_result)
+        score_valid = r2_score(y_valid, mean_valid_result)
+        score_test = r2_score(y_test, mean_test_result)
         print(score_train)
         print(score_test)
 
