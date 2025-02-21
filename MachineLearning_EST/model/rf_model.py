@@ -84,7 +84,7 @@ def PI_RF():
     model = set_model()
     model.fit(x_train_data, y_train_data)
     y_test_predicted = model.predict(x_test)
-    print(r2_score(y_test_predicted, y_test))
+    print(r2_score(y_test, y_test_predicted))
 
 
 def set_model():
