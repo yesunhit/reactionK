@@ -152,9 +152,9 @@ def PI_SVM():
                 temp += valid_result[i][j]
             mean_valid_result[i][0] = temp / len(valid_result[0])
 
-        score_train = r2_score(mean_train_result, y_train)
-        score_valid = r2_score(mean_valid_result, y_valid)
-        score_test = r2_score(mean_test_result, y_test)
+        score_train = r2_score(y_train, mean_train_result)
+        score_valid = r2_score(y_valid, mean_valid_result)
+        score_test = r2_score(y_test, mean_test_result)
 
     model = set_model()
     model.fit(x_train_data, y_train_data)
