@@ -16,7 +16,7 @@ data_processing = DataProcessing("../data/train_data.xlsx", "../data/test_data.x
 
 def score(x, y, model):
     y_pred = model.predict(x[0:])
-    return r2_score(y_pred, y)
+    return r2_score(y, y_pred)
 
 
 def get_RMSE(target, prediction):
